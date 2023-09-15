@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTMX</title>
+
+    <link rel="icon" href="images/htmx-icon.png" type="image/png">
+    <link rel="icon" href="images/htmx-icon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="scripts/loader.js"></script>
+</head>
+
+<body>
+    <include src="includes/header.html" data-sub-title=""></include>
+
+    <main id="home">
+
+        <!-- ----------------------------------------------------------------------------------- -->
+
+        <include src="includes/intro.html"></include>
+
+        <!-- ----------------------------------------------------------------------------------- -->
+
+        <include src="includes/nav.html"></include>
+
+        <!-- ----------------------------------------------------------------------------------- -->
+
+        <article>
+            <h2>An Example Use of HTMX</h2>
+
+            <pre><code class="language-html"><!--
+                <h1>Hello!</h1>
+            --></code></pre>
+
+            <pre><code class="language-css">
+                :root {
+                    --hello: "Hello!";
+                }
+            </code></pre>
+
+        </article>
+
+        <!-- ----------------------------------------------------------------------------------- -->
+
+        <article>
+            <h2>Program Output</h2>
+
+            <p>This program shows off some of the neat, concise Kotlin syntax: <a href="collections.html">data collections</a>, <a href="classes.html">classes</a>, <a href="iteration.html">forEach</a>, <a href="branching.html">when</a>, <a href="strings.html">String templates</a>, null safety, etc.</p>
+
+            <p>Here is an example run for the program:</p>
+
+        </article>
+
+    </main>
+
+    <script src="scripts/prism.js"></script>
+</body>
+
+</html>
