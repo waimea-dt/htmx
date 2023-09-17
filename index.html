@@ -12,48 +12,50 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="scripts/loader.js"></script>
+    <script src="scripts/htmx.min.js"></script>
 </head>
 
 <body>
+    <!-- <header hx-get="includes/header.html" hx-trigger="load" hx-swap="outerHTML"></header> -->
     <include src="includes/header.html" data-sub-title=""></include>
 
     <main id="home">
 
         <!-- ----------------------------------------------------------------------------------- -->
 
+        <!-- <article hx-get="includes/intro.html" hx-trigger="load" hx-swap="outerHTML"></article> -->
         <include src="includes/intro.html"></include>
 
         <!-- ----------------------------------------------------------------------------------- -->
 
+        <!-- <article hx-get="includes/nav.html" hx-trigger="load" hx-swap="outerHTML"></article> -->
         <include src="includes/nav.html"></include>
 
-        <!-- ----------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------------- -->
 
         <article>
-            <h2>An Example Use of HTMX</h2>
 
-            <pre><code class="language-html"><!--
-                <h1>Hello!</h1>
-            --></code></pre>
+            <h2>Example - Retrieve and Show Data</h2>
 
-            <pre><code class="language-css">
-                :root {
-                    --hello: "Hello!";
-                }
-            </code></pre>
+            <p>Here, each click of a button issues a request to the server for a new data record.</p>
+
+            <div hx-trigger="load" hx-get="demo/contact/1.html" hx-target="this" class="demo small"></div>
 
         </article>
 
         <!-- ----------------------------------------------------------------------------------- -->
 
         <article>
-            <h2>Program Output</h2>
 
-            <p>This program shows off some of the neat, concise Kotlin syntax: <a href="collections.html">data collections</a>, <a href="classes.html">classes</a>, <a href="iteration.html">forEach</a>, <a href="branching.html">when</a>, <a href="strings.html">String templates</a>, null safety, etc.</p>
+            <h2>Example - Edit Data in Place</h2>
 
-            <p>Here is an example run for the program:</p>
+            <p>Here, some user data is shown. When the Edit button is clicked, the data is replaced by a form, and when this is submitted the updated data is shown.</p>
+
+            <div hx-trigger="load" hx-get="demo/form/data.html" hx-target="this" class="demo small"></div>
 
         </article>
+
+        <!-- ----------------------------------------------------------------------------------- -->
 
     </main>
 
